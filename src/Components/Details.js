@@ -7,6 +7,7 @@ const Details = () => {
 
      const submitHandler = (e)=>{
         e.preventDefault();
+        setData(data);
      }
 
   return (  
@@ -28,6 +29,7 @@ const Details = () => {
             <div className='form'>
                 <label>Name:</label>
                 <input placeholder='Enter your Name'
+                required
                 type='text'
                 value={data.name}
                 onChange={(e)=>setData(e.target.value)}
@@ -35,22 +37,36 @@ const Details = () => {
             </div>
             <div className='form'>
                 <label>Unit:</label>
-                <input placeholder='Enter unit number'
+                <input required
+                placeholder='Enter unit number'
+                value={data.unit}
                 type='number'
+                onChange={(e)=>setData(e.target.value)}
                 />
             </div>
             <div className='form'>
                 <label>Time From:</label>
-                <input type='time'/>
+                <input required 
+                value={data.timeFrom}
+                type='time'
+                onChange={(e)=>setData(e.target.value)}
+                />
             </div>
             <div className='form'>
                 <label>Time To:</label>
-                <input type='time'/>
+                <input required
+                value={data.timeTo}
+                type='time'
+                onChange={(e)=>setData(e.target.value)}
+                />
             </div>
             <div className='form'>
                 <label>Date:</label>
-                <input 
-                type='date'/>
+                <input required
+                value={data.date}
+                type='date'
+                onChange={(e)=>setData(e.target.value)}
+                />
             </div>
             <div className='form'>
                 <button type='submit'>Book Park BBQ</button>
@@ -59,6 +75,7 @@ const Details = () => {
                 <button type='submit'>Book Pool BBQ</button>
             </div>
         </form>   
+        {console.log(data)}
     </div>
   )
 }
