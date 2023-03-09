@@ -1,13 +1,13 @@
 import Title from './Components/Title';
 import './App.css';
 import Footer from './Components/Footer';
-import Details from './Components/Details';
+import Form from './Components/Form';
 
 function App() {
   return (
     <div className="App">
       <Title />
-      <Details />
+      <Form />
       <Footer />
     </div>
   );
