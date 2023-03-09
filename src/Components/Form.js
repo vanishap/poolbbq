@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
+import Select from './Select';
 
-const Details = () => {
+const Form = () => {
     const [data, setData] = useState({name:'', unit:'', date:'',timeFrom:'',timeTo:''});
   
 
@@ -10,21 +11,11 @@ const Details = () => {
         setData(data);
      }
 
-  return (  
+  return (  <>
+    <div className='select-option'>
+        <Select />
+    </div>
     <div className='input-forms'>
-        <div className='form'>
-            <select >
-                <option>
-                    Select
-                </option>
-                <option>
-                    Pool BBQ
-                </option>
-                <option>
-                    Park BBQ
-                </option>
-            </select> 
-       </div>
         <form  onSubmit={()=>submitHandler()}>
             <div className='form'>
                 <label>Name:</label>
@@ -77,7 +68,8 @@ const Details = () => {
         </form>   
         {console.log(data)}
     </div>
+    </>
   )
 }
 
-export default Details
+export default Form;
