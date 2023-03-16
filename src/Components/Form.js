@@ -1,9 +1,10 @@
-import React,{useState} from 'react';
+import React,{useState, useContext} from 'react';
 import Select from './Select';
+import Context from './Context';
 
 const Form = () => {
     const [data, setData] = useState({name:'', unit:'', date:'',timeFrom:'',timeTo:''});
-  
+    const {selection} = useContext(Context)
 
 
      const changeHandler = (e)=>{
@@ -67,13 +68,11 @@ const Form = () => {
                 />
             </div>
             <div className='form'>
-                <button type='submit'>Book Park BBQ</button>
+                    <button type='submit'>Book </button>
             </div>
-            <div className='form'>
-                <button type='submit'>Book Pool BBQ</button>
-            </div>
+            
         </form>   
-        {console.log(data)}
+        {selection.bbq2}
     </div>
     </>
   )
