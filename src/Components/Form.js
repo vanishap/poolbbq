@@ -68,11 +68,11 @@ const Form = () => {
                 />
             </div>
             <div className='form'>
-                    <button type='submit'>Book </button>
+                    <button type='submit'>{(Select === selection.bbq1)?selection.bbq1 :selection.bbq2} </button>
             </div>
             
         </form>   
-        {selection.bbq2}
+        
     </div>
     </>
   )
