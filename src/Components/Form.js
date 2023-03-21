@@ -1,6 +1,7 @@
 import React,{useState, useContext} from 'react';
 import Select from './Select';
 import Context from './Context';
+import Login from './Login';
 
 const Form = () => {
     const [data, setData] = useState({name:'', unit:'', date:'',timeFrom:'',timeTo:''});
@@ -15,7 +16,8 @@ const Form = () => {
      }
 
   return (  <>
-    <div className='select-option'>
+    <div><Login /></div>
+    <div className='select-option'>  
         <Select />
     </div>
     <div className='input-forms'>
